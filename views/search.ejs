@@ -69,6 +69,9 @@
             transition: width 0.4s ease-in-out;
         }
 
+        #navim{
+      padding-right: 0px;
+    }
         /* input[type=text]:focus {
   width: 80%;
 } */
@@ -76,7 +79,9 @@
             .navi {
                 padding-left: 10px;
             }
-
+            #navim{
+      padding-right: 30px;
+    }
             input[type=text] {
 
                 width: 80%;
@@ -187,7 +192,9 @@
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title bb">
+                                            <a href="<%=b[i].id%>" style="text-decoration: none; color: black;">
                                             <%=b[i].title%>
+                                            </a>
                                         </h5>
 
                                         <p class="card-text"><a href="<%=b[i].id%>"
