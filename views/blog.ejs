@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=b.title%></title>
+    <meta name="description" content="<%=b.description%>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            
+            width: 100%;
+         }
+         body{
+            font-family: 'Roboto Regular 700', sans-serif;
+         }
+         .bb{
+            font-family: 'Roboto Black 900', sans-serif;
+            font-weight: 600;
+         }
+         .ss{
+            color: rgb(114, 114, 114);
+          font-family: 'Roboto Regular 100';
+          
+         }
+         
+         input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+  background-color: white;
+ 
+  padding-top: 5px;
+            padding-bottom: 5px;
+  padding-left: 5px;
+  
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* input[type=text]:focus {
+  width: 80%;
+} */
+@media screen and (max-width: 988px) {
+           .navi{
+            padding-left: 10px;
+           }
+           input[type=text] {
+           
+            width: 80%;
+            margin-left: 0px;
+           }
+          
+           
+        }
+        .lgo{
+            padding-right: 45px;
+           }
+
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid d-lg-block d-xl-block d-none pt-3 bg-white position-relative" style=" z-index: 5;">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="logo.JPG" height="40px" width="200px">
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow bg-white rounded sticky" style="z-index: 4;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="logo.JPG" height="40px" width="200px" class="d-lg-none d-xl-none mx-auto" id="navim">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto navi" id="navme">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/technology">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/science">Science</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/history">History</a>
+                    </li> -->
+                    <li>
+                        <form id="fm" action="/search" method="get">
+                      <input id="in" class="d-lg-none d-xl-none" type="text" name="search" placeholder="Search.." required>
+                      <i class="fas fa-search m-2" id="ic" onclick="opensearch()"></i>
+                        </form>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container bg-white p-3">
+        <div class="mt-4 mx-auto" style="max-width: 1000px;">
+            <h1 class="bb"><%=b.title%></h1>
+            <p class="ss"><%=b.description%></p>
+            <p class="ss">By <%=b.author%> | Date: <%=b.date%> |</p>
+            <div class="mx-auto" style="max-height: 400px; max-width: 350px;">
+                <img class="img-fluid" src=<%=b.source%> style="max-height: 400px;">
+            </div>
+            <%b.matter.forEach(elem => {%>
+            <div class="mt-4" style="text-align: justify;">
+                <%=elem%>
+            </div>
+            <%});%>
+        </div>
+    </div>
+    <div class="container-fluid p-2" style="background-color: #8d50ff;">
+        
+        <div class="container ss">
+        <p style="text-align: center;"><a href="#" style="color: white;">About us</a></p>
+        <p style="text-align: center;"><a href="#" style="color: white;">Contact us</a></p>
+        <p style="text-align: center; color: white;">copyright &copy 2022 Buzzword All rights reserved</p>
+        </div>
+       
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <script>
+            // When the user scrolls down 20px from the top of the document, slide down the navbar
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+                   var elem = document.getElementById("navme");
+                   elem.classList.add("me-4");
+                   var el = document.getElementById("navim");
+                   el.classList.remove("d-lg-none");
+                   el.classList.remove("d-xl-none");
+                   
+              } else {
+                var elem = document.getElementById("navme");
+                   elem.classList.remove("me-4");
+                   var el = document.getElementById("navim");
+                   el.classList.add("d-lg-none");
+                   el.classList.add("d-xl-none");
+                   
+              }
+            }
+            function opensearch() {
+            
+              var elem = document.getElementById("in");
+              if(elem.classList.length == 0){
+                elem.classList.add("d-lg-none");
+              elem.classList.add("d-xl-none");
+              }
+              else{
+              elem.classList.remove("d-lg-none");
+              elem.classList.remove("d-xl-none");
+              }
+              var form = document.getElementById("fm");
+              if(fm.search.value == ""){
+      
+              }
+              else{
+                form.submit();
+                console.log(fm.search.value);
+              }
+            }
+            
+            </script>
+</body>
+
+</html>
