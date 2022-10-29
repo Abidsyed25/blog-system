@@ -262,7 +262,7 @@ server.get("/:id", async (req, res) => {
 });
 
 server.listen(port, () => {
-    console.log("connected");
+    console.log("connected ok");
 });
 
 
