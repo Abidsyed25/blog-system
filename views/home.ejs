@@ -21,7 +21,6 @@
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
@@ -32,8 +31,8 @@
     }
 
     .sticky {
-      position: sticky;
       top: 0;
+      position: sticky;
       width: 100%;
     }
 
@@ -51,7 +50,6 @@
       font-family: 'Roboto Regular 100';
 
     }
-
 
     input[type=text] {
       width: 130px;
@@ -80,21 +78,23 @@
         padding-left: 10px;
       }
       #navim{
-        padding-right: 30px;
-      }
+      padding-right: 30px;
+    }
       input[type=text] {
 
         width: 80%;
         margin-left: 0px;
       }
-      
 
-      .lgo {
-        padding-right: 45px;
-      }
-      .er {
+
+    }
+
+    .lgo {
+      padding-right: 45px;
+    }
+    .er {
             height: 10vh;
-        }
+        } 
         .err {
             height: 60vh;
 
@@ -102,14 +102,14 @@
             /* display: flex;
             justify-content: center;
             align-items: center; */
-        }
-    }
+        }    
+
   </style>
 </head>
 
 <body class="bg-light">
 
-  <div class="container-fluid d-lg-block d-xl-block d-none pt-3 bg-white position-relative" style="z-index: 5;">
+  <div class="container-fluid d-lg-block d-xl-block d-none pt-3 bg-white position-relative" style=" z-index: 5;">
     <div class="d-flex justify-content-center align-items-center">
       <img src="logo.JPG" height="40px" width="200px">
     </div>
@@ -126,7 +126,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto navi" id="navme">
           <li class="nav-item">
-            <a class="nav-link active" href="/home">Home</a>
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/technology">Technology</a>
@@ -145,18 +145,8 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="input-group rounded sr" style="width: 200px;">
-        
-          <i class="fas fa-search m-3"></i>
-        
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        
-      </div> -->
     </div>
   </nav>
-
-
-
 
   <div class="container bg-white p-3">
     <div class="mt-4 mx-auto" style="max-width: 900px;">
@@ -164,12 +154,12 @@
         <h3 class="bb">Top Stories</h3>
 
       </div>
-       
       <%if(b.length==0){%>
         <div class="err">
             <h3> Sorry no results found!!</h3>
         </div>
         <%}%>
+    
       <%b.forEach((elem,i)=> {%>
         <div class="card mx-auto my-3" style="max-width: 900px;">
             <div class="row g-0">
@@ -206,17 +196,16 @@
                 <%}%>
     </div>
   </div>
+
   <div class="container-fluid p-2" style="background-color: #8d50ff;">
 
     <div class="container ss">
       <p style="text-align: center;"><a href="#" style="color: white;">About us</a></p>
       <p style="text-align: center;"><a href="#" style="color: white;">Contact us</a></p>
       <p style="text-align: center; color: white;">copyright &copy 2022 Buzzword All rights reserved</p>
-
     </div>
 
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>

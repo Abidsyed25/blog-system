@@ -157,17 +157,17 @@ server.get("/admin", async (req, res) => {
         const bool = jwt.verify(token, "Abcdefghijklmnopqrstuvwxyz");
         
         const doc = await user.findOne({ _id: bool._id });
-    
-         const blog = await document.find().sort({ id: -1 });
         var c = 0;
-        if(blog == null){
-            c = 10000;
+        try{
+         const blog = await document.find().sort({ id: -1 });
+         
+         c = blog[0].id;
+         c = parseInt(c);
+        }catch(err){
+        
+                c = 10000;
         }
-        else{
-            
-            c = blog[0].id;
-            c = parseInt(c);
-        }
+       
         
         if (doc) {
             res.render('admin',{
