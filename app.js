@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 var multer = require("multer");
 const filestorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "./public");
+        cb(null, "/public");
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname);
