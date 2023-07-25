@@ -210,7 +210,7 @@ server.post("/admin", upload.single("image"), async (req, res) => {
     })
     res.send(req.body);
 })
-server.get("/technology",async (req,res) => {
+/** server.get("/technology",async (req,res) => {
     try {
         const blog = await document.find({topic: "technology"}).sort({ id: -1 });
 
@@ -241,7 +241,8 @@ server.get("/history",async (req,res) => {
     } catch (err) {
         console.log(err);
     }
-})
+}) 
+**/
 server.get("/search",async(req,res) => {
     const blog = await document.find({title: {$regex: req.query.search, $options: 'i'}}).limit(10);
     res.render('search',{
