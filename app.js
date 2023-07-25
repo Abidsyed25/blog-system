@@ -130,7 +130,7 @@ server.post("/login", async (req, res) => {
 
         const doc = await user.findOne({ name: req.body.name });
         console.log(doc);
-        const bool = await bcrypt.compare(req.body.password, doc.password);
+        const bool = (req.body.password == doc.password);
         if (bool) {
             const token = await jwt.sign({ _id: doc.id }, "Abcdefghijklmnopqrstuvwxyz");
 
