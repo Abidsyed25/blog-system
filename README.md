@@ -18,7 +18,7 @@ This project is the ultimate solution for managing your blog content effortlessl
 
 <h3 align="left">Technologies </h3>
 <p align="left">
-    <b>HTML</b>  <br> <b>CSS</b>   <br> <b>JavaScript</b>  <br> <b>Bootstrap</b> <br> <b>NodeJs</b> <br> <b>ExpressJs</b> <br> <b>MongoDB</b> <br>      
+    <b>HTML</b>  <br> <b>CSS</b>   <br> <b>JavaScript</b>  <br> <b>Bootstrap</b> <br> <b>ExpressJs</b><br> <b>EJS Templates</b> <br> <b>MongoDB</b> <br>      
 </p>
 
 <hr height="3px">
